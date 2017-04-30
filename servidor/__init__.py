@@ -1,0 +1,1 @@
+from .alertafuego import app

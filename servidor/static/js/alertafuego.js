@@ -12,6 +12,7 @@ $(function(){
 
   var kmlLayer = new L.KML('https://lewatoto.github.io/alertafuego/MODIS_C6_Central_America_24h.kml', {async: true});
     kmlLayer.on("loaded", function(e) {
+      console.log(e);
     //map.fitBounds(e.target.getBounds());
     });
   map.addLayer(kmlLayer);

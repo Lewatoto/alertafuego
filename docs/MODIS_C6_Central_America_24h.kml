@@ -3,10 +3,10 @@
 <Document>
 <name>MODIS C6 Central America 24h  MODIS Hotspots</name>
 <description><![CDATA[ Fires detected by MODIS during past 24 hours.<br><br>More information: <a href="https://earthdata.nasa.gov/data/nrt-data/firms">https://earthdata.nasa.gov/data/nrt-data/firms</a> ]]></description>
-<Style id="fireIcon1"><IconStyle><scale>1</scale><Icon><href>https://earthdata.nasa.gov/media/firms-google-earth-fire-icon.png</href></Icon></IconStyle> 
-<LabelStyle><scale>0.1</scale></LabelStyle>	</Style>
-<Style id="fireIconHilite"><IconStyle><scale>1</scale><Icon><href>https://earthdata.nasa.gov/media/firms-google-earth-fire-icon.png</href></Icon></IconStyle>
-<LabelStyle><scale>0.1</scale></LabelStyle></Style>
+<Style id="fireIcon1"><IconStyle><scale>1</scale><Icon><href>https://lewatoto.github.io/alertafuego/marker-icon.png</href></Icon></IconStyle> 
+<LabelStyle><scale>1</scale></LabelStyle>	</Style>
+<Style id="fireIconHilite"><IconStyle><scale>1</scale><Icon><href>https://lewatoto.github.io/alertafuego/marker-icon.png</href></Icon></IconStyle>
+<LabelStyle><scale>1</scale></LabelStyle></Style>
 <StyleMap id="fireIcon"><Pair><key>normal</key><styleUrl>#fireIcon1</styleUrl></Pair><Pair><key>highlight</key><styleUrl>#fireIconHilite</styleUrl></Pair></StyleMap>
 <Folder>
 <name> Fire Points List </name>

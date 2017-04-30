@@ -1,1 +1,9 @@
-#map{ height: 100% }
+#map{ height: 70% }
+
+.reporte {
+  height: 15%
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  overflow-y: auto;
+}

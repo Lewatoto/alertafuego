@@ -1,16 +1,35 @@
 <html>
 <head>
-  <title>Alerta fuego</title>
+  <title>Alerta fuego GT</title>
   <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/leaflet.css') }}">
   <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/alertafuego.css') }}">
-  <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/distance.css') }}">
-  <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/osb.css') }}">
+  <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/bulma.css') }}">
   <script type=text/javascript src="{{url_for('static', filename='js/jquery-3.1.1.min.js') }}"></script>
   <script type=text/javascript src="{{url_for('static', filename='js/leaflet.js') }}"></script>
   <script type=text/javascript src="{{url_for('static', filename='js/KML.js') }}"></script>
 </head>
 <body>
-  <div id="map"></div>
+  <div class="tile is-ancestor">
+    <div class="tile is-child is-12 notification is-info">
+      <h1 class="Title">Alerta Fuego GT</h1>
+      <div class="field has-addons is-fullwidth">
+        <p class="control">
+          <input class="input" type="text" placeholder="Latitud" id="lat" disabled>
+        </p>
+        <p class="control">
+          <input class="input" type="text" placeholder="Longitud" id="long" disabled>
+        </p>
+        <p class="control">
+          <a class="button" id="reportar">
+            Reportar incendio
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div  id="map"></div>
+
+
 </body>
 <script type=text/javascript src="{{url_for('static', filename='js/alertafuego.js') }}"></script>
 </html>

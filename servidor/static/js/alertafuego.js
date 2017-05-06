@@ -7,39 +7,42 @@ $(function(){
   // load a tile layer
   var capa = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
       attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
-      maxZoom: 13,
-      minZoom: 8
+      maxZoom: 14,
+      minZoom: 6
   }).addTo(map);
 
 /*
   var kmlLayer = new L.KML('https://lewatoto.github.io/alertafuego/MODIS_C6_Central_America_24h.kml', {async: true});
     kmlLayer.on("loaded", function(e) {
-      console.log(e);
+      console.log("SI");
     //map.fitBounds(e.target.getBounds());
     });
-  map.addLayer(kmlLayer);
+  map.addLayer(kmlLayer);*/
 
-*/
-  /*
+
+/*
   $.ajax ({
     type:'GET',
-    dataType:'text',
-    url:'https://lewatoto.github.io/alertafuego/MODIS_C6_Central_America_24h.csv',
+    dataType:'text/plain',
+    url:"/csv",
     error: function() {
       alert('No se pudieron cargar los datos');
     },
     success: function(csv) {
-      var kmlLayer = new L.KML(csv, {async: true});
-        kmlLayer.on("loaded", function(e) {
-        map.fitBounds(e.target.getBounds());
-        });
-        map.addLayer(kmlLayer);
+      var geoLayer = L.geoCsv(csv, {firstLineTitles: true, fieldSeparator: ','});
+      map.addLayer(map);
     }
   });*/
 
+  $.get('datos.csv', function(csvContents) {
+    console.log(csvContents[0]);
+    var geoLayer = L.geoCsv(csvContents, {titles: ['lat', 'lng', 'popup'],firstLineTitles: true, fieldSeparator: ','});
+    map.addLayer(geoLayer);
+  });
+
   $("#reportar").click(function(){
-    alert("reporte con éxito");
     obtenerposicion();
+
   });
 });
 
@@ -55,4 +58,5 @@ function reporte(posicion){
   $('#lat').val(posicion.coords.latitude);
   $('#long').val(posicion.coords.longitude);
   var marker = L.marker([posicion.coords.latitude,posicion.coords.longitude]).addTo(map);
+  alert("Reporte realizado con éxito");
 };

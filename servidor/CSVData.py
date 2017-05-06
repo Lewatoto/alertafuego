@@ -17,7 +17,7 @@ Bright_t31=[]
 Frp=[]
 Daynight=[]
 archivo = open('datos.csv','w')
-archivo.write('Lat,Lng,popup  \n')
+archivo.write('lat,lng,popup  \n')
 datos.pop(0)
 a=0
 for i in datos:

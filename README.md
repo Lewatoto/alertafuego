@@ -15,3 +15,4 @@ As a next step is to implement a program made in OpenCV which can detect forest 
 * Leaflet (http://leafletjs.com/​)
 * Leaflet GeoCSV​ (https://github.com/joker-x/Leaflet.geoCSV​)
 * Fedora 25 x64 (https://getfedora.org/)
+* Fire Information for Resource Management System (FIRMS) Active Fire Data (https://earthdata.nasa.gov/earth-observation-data/near-real-time/firms/active-fire-data)

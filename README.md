@@ -1,11 +1,13 @@
 # alertafuego
 Solución al reto And YOU can Help Fight Fires! #Spaceapps2017
 
+![demo_alerta_fuego_gt_sparkprojects](/alertafuegogt.png)
+
 ## The project
 
 The webpage maps the points of the wildfires in the area, making a filter with the latitude and longitude of the country selected, the confidence of the wildfire and the acquired date of the data. Any person can alert of a wildfire by simply pressing a button and giving permission to get their location by GPS. Also, by making the alert on the webpage, automatically makes a tweet on your timeline with the authorities in charge of extinguish the wildfire labeled.​
 
-As a next step is to implement a program made in OpenCV which can detect forest fires by means of the drones cameras send by local teams to reduce cost and time spent verifying a wildfire.​
+The next step is to implement a program in OpenCV which can detect wildfires with the drone’s cameras send by local authorities to reduce costs and time spent verifying the wildfire existence.
 
 ## Resources
 
@@ -16,3 +18,8 @@ As a next step is to implement a program made in OpenCV which can detect forest 
 * Leaflet GeoCSV​ (https://github.com/joker-x/Leaflet.geoCSV​)
 * Fedora 25 x64 (https://getfedora.org/)
 * Fire Information for Resource Management System (FIRMS) Active Fire Data (https://earthdata.nasa.gov/earth-observation-data/near-real-time/firms/active-fire-data)
+
+## To do:
+- [ ] Validate correctly the wildfire alerts of the users, in order to upgrade the confidence of the wildfire.
+- [ ] Generate a map with the wildfire area pinpointed and publish it in social media
+- [ ] Implement a program in OpenCV which can detect wildfires with the drone’s cameras

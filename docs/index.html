@@ -1,0 +1,36 @@
+<html>
+<head>
+  <title>Alerta fuego GT</title>
+  <link rel=stylesheet type=text/css href="/static/css/leaflet.css">
+  <link rel=stylesheet type=text/css href="/static/css/alertafuego.css">
+  <link rel=stylesheet type=text/css href="/static/css/bulma.css">
+  <script type=text/javascript src="/static/js/jquery-3.1.1.min.js"></script>
+  <script type=text/javascript src="/static/js/leaflet.js"></script>
+  <script type=text/javascript src="/static/js/KML.js"></script>
+  <script type=text/javascript src="/static/js/leaflet.geocsv.js"></script>
+</head>
+<body>
+  <div class="tile is-ancestor is-fullwidth reporte">
+    <div class="tile is-child is-fullwidth notification is-info is-bold">
+      <h1 class="Title is-1">Alerta Fuego GT</h1>
+      <div class="field has-addons is-fullwidth">
+        <p class="control">
+          <input class="input is-large" type="text" placeholder="Latitud" id="lat" disabled>
+        </p>
+        <p class="control">
+          <input class="input is-large" type="text" placeholder="Longitud" id="long" disabled>
+        </p>
+        <p class="control">
+          <a class="button is-large" id="reportar">
+            Reportar incendio
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div  id="map"></div>
+
+
+</body>
+<script type=text/javascript src="/static/js/alertafuego.js"></script>
+</html>

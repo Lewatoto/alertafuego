@@ -1,0 +1,14 @@
+.reporte {
+
+}
+
+#map{ min-height: 80vh; }
+
+
+@media only screen and (max-device-width: 480px) {
+  .reporte {
+    min-height: 25vh;
+  }
+
+  #map{ min-height: 80vh; }
+	}

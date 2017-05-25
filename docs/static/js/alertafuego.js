@@ -76,7 +76,7 @@ $(function(){
 		incendios.addData(csv);
 		cluster.addLayer(incendios);
 		map.addLayer(cluster);
-		map.fitBounds(cluster.getBounds());
+		//map.fitBounds(cluster.getBounds());
   });
 
   $("#reportar").click(function(){

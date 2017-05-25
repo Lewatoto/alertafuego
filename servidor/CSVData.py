@@ -1,5 +1,7 @@
 import csv
+import reverse_geocode
 with open('MODIS_C6_Central_America_24h.csv', 'rb') as f:
+    next(f, None)
     reader = csv.reader(f)
     datos = list(reader)
 
@@ -20,8 +22,13 @@ archivo = open('datos.csv','w')
 archivo.write('lat,lng,popup  \n')
 datos.pop(0)
 a=0
+
 for i in datos:
 
+    coord = (i[0],i[1]),
+    pais = reverse_geocode.search(coord)
+    print pais[0]['country']
+    print '\n'
     Latitude.append(i[0])
     Longitude.append(i[1])
     Brightness.append(i[2])#t21
@@ -35,11 +42,10 @@ for i in datos:
     Bright_t31.append(i[10])#t31
     Frp.append(i[11])
     Daynight.append(i[12])
-    if(float(Latitude[a])>13.7381)and(float(Latitude[a])<17.937)and(float(Longitude[a])>-92.109)and(float(Longitude[a])<-88.285)and(int(Confidence[a])>60)and(float(Brightness[a])>330):
+    if(pais[0]['country']=='Guatemala')and(int(Confidence[a])>60)and(float(Brightness[a])>330):
         print Latitude[a]+','+Longitude[a]+','+Confidence[a]+','+Acq_Date[a]+'\n'
         archivo.write(Latitude[a]+','+Longitude[a]+','+Acq_Date[a]+'\n')
     a =a+1
-
 
 
 archivo.close()

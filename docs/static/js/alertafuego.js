@@ -1,16 +1,36 @@
-var map = L.map('map').setView([15.753, -90.291], 8);
+var map = L.map('map',{twoFingerZoom: true}).setView([15.753, -90.291], 8);
 
 $(function(){
   // initialize the map
   //var map = L.map('map').setView([15.753, -90.291], 8);
 
   // load a tile layer
-  var capa = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+  var mapa = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
       attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
       maxZoom: 14,
       minZoom: 1
   }).addTo(map);
 
+  var now = new Date();
+  var oneDay = 1000*60*60*24, // milliseconds in one day
+    startTimestamp = now.getTime() - oneDay + now.getTimezoneOffset()*60*1000,
+    startDate = new Date(startTimestamp); //previous day
+
+  console.log(now);
+  console.log(startTimestamp);
+  console.log(startDate);
+
+  var layer = new L.GIBSLayer('MODIS_Aqua_CorrectedReflectance_TrueColor', {
+    date: startDate,
+    transparent: true
+  });
+
+  var baseMaps = {
+    "OpenStreetMap" : mapa,
+    "NASA EODIS GIBS (1 día de retraso)" : layer
+  };
+
+  L.control.layers(baseMaps).addTo(map);
 /*
   var kmlLayer = new L.KML('https://lewatoto.github.io/alertafuego/MODIS_C6_Central_America_24h.kml', {async: true});
     kmlLayer.on("loaded", function(e) {

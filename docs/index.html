@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
   <title>Alerta fuego GT</title>
@@ -9,20 +10,24 @@
   <meta http-equiv="pragma" content="no-cache" />
 
   <link rel=stylesheet type=text/css href="/alertafuego/static/css/leaflet.css">
-  <link rel=stylesheet type=text/css href="/alertafuego/static/css/alertafuego.css">
   <link rel=stylesheet type=text/css href="/alertafuego/static/css/bulma.css">
+  <link rel=stylesheet type=text/css href="/alertafuego/static/css/alertafuego.css">
   <link rel=stylesheet type=text/css href="/alertafuego/static/css/MarkerCluster.css">
   <link rel=stylesheet type=text/css href="/alertafuego/static/css/MarkerCluster.Default.css">
   <script type=text/javascript src="/alertafuego/static/js/jquery-3.1.1.min.js"></script>
   <script type=text/javascript src="/alertafuego/static/js/leaflet.js"></script>
+  <script type=text/javascript src="/alertafuego/static/js/leaflet.twofingerzoom.js"></script>
   <script type=text/javascript src="/alertafuego/static/js/leaflet.geocsv.js"></script>
   <script type=text/javascript src="/alertafuego/static/js/leaflet.markercluster.js"></script>
+  <script type=text/javascript src="/alertafuego/static/js/GIBSLayer.js"></script>
+  <script type=text/javascript src="/alertafuego/static/js/GIBSMetadata.js"></script>
 </head>
-<body>
-  <div class="tile is-ancestor is-fullwidth reporte">
-    <div class="tile is-child is-fullwidth notification is-info is-bold">
-      <h1 class="Title is-1">Alerta Fuego GT</h1>
-      <div class="field has-addons is-fullwidth">
+
+<body class="hero is-fullheight">
+  <div class="hero-head tile notification is-info reporte level">
+
+      <h1 class="title is-2 level-left">Alerta Fuego GT</h1>
+      <div class="field has-addons level-right">
         <p class="control">
           <input class="input is-large" type="text" placeholder="Latitud" id="lat" disabled>
         </p>
@@ -35,9 +40,9 @@
           </a>
         </p>
       </div>
-    </div>
+
   </div>
-  <div  id="map"></div>
+  <div  class="hero-body" id="map"></div>
 
 
 </body>

@@ -23,6 +23,7 @@ https://lewatoto.github.io/alertafuego/
 * Bulma (http://bulma.io/) 
 * Fedora 25 x64 (https://getfedora.org/)
 * Fire Information for Resource Management System (FIRMS) Active Fire Data (https://earthdata.nasa.gov/earth-observation-data/near-real-time/firms/active-fire-data)
+* NASA Near Real-Time and MCD14DL MODIS Active Fire Detections (TXT format). Data set. Available on-line [https://earthdata.nasa.gov/active-fire-data]
 
 ## To do:
 - [ ] Validate correctly the wildfire alerts of the users, in order to upgrade the confidence of the wildfire.

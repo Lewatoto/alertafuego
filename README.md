@@ -10,7 +10,7 @@ The webpage maps the points of the wildfires in the area, making a filter with t
 The next step is to implement a program in OpenCV which can detect wildfires with the drone’s cameras send by local authorities to reduce costs and time spent verifying the wildfire existence.
 
 ## Demo
-Data 25/05/2017
+Data 31/01/2018
 https://lewatoto.github.io/alertafuego/
 
 ## Resources

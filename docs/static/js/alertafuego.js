@@ -1,5 +1,5 @@
 var map = L.map('map',{twoFingerZoom: true}).setView([15.753, -90.291], 8);
-
+var nombres = ["Fecha","Hora UTC","Probabilidad"]
 $(function(){
   // initialize the map
   //var map = L.map('map').setView([15.753, -90.291], 8);
@@ -60,9 +60,11 @@ $(function(){
     fieldSeparator: ',',
     onEachFeature: function (feature, layer){
       var popup = '';
+      var i=0;
       for (var clave in feature.properties){
         var title = incendios.getPropertyTitle(clave);
-        popup += '<b>'+'Fecha'+'</b><br />'+feature.properties[clave]+'<br /><br />';
+        popup += '<b>'+nombres[i]+'</b><br />'+feature.properties[clave]+'<br /><br />';
+        i++;
       }
       layer.bindPopup(popup);
     }

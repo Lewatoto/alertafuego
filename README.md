@@ -10,7 +10,7 @@ The webpage maps the points of the wildfires in the area, making a filter with t
 The next step is to implement a program in OpenCV which can detect wildfires with the drone’s cameras send by local authorities to reduce costs and time spent verifying the wildfire existence.
 
 ## Demo
-Data 31/01/2018
+Data updated every hour
 https://lewatoto.github.io/alertafuego/
 
 ## Resources
@@ -20,7 +20,7 @@ https://lewatoto.github.io/alertafuego/
 * Openstreetmaps (https://www.openstreetmap.org/​)
 * Leaflet (http://leafletjs.com/​)
 * Leaflet GeoCSV​ (https://github.com/joker-x/Leaflet.geoCSV​)
-* Bulma (http://bulma.io/) 
+* Bulma (http://bulma.io/)
 * Fedora 25 x64 (https://getfedora.org/)
 * Fire Information for Resource Management System (FIRMS) Active Fire Data (https://earthdata.nasa.gov/earth-observation-data/near-real-time/firms/active-fire-data)
 * NASA Near Real-Time and MCD14DL MODIS Active Fire Detections (TXT format). Data set. Available on-line [https://earthdata.nasa.gov/active-fire-data]
